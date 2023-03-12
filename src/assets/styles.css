@@ -1,0 +1,249 @@
+/* Global styling */
+
+#root {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.app {
+  --accent-color: #30343F;
+  --shadow-color: 0deg 0% 71%;
+  --background-color: #ECECEC;
+  --font-color: #696969;
+  font-size: 12.5px;
+  color: var(--font-color);
+  height: 100%;
+  width: calc(100% - 30px);
+  margin: 10vh auto;
+}
+
+@media only screen and (min-width: 481px) {
+  .app {
+    font-size: 14px;
+    width: 480px;
+    margin: 12vh auto;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .app {
+    font-size: 16px;
+    width: 600px;
+    margin: 14vh auto;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .app {
+    margin: 18vh auto;
+  }
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #CCCCCC;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #CCCCCC;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #CCCCCC;
+}
+
+a, a:active {
+  color: black;
+}
+
+.walletwrapper {
+  float: right;
+  margin: 15px;
+}
+
+/* Fade in animation */
+
+@keyframes fadein {
+  0% { opacity: 0 }
+  100% { opacity: 1 }
+}
+
+.fadein {
+  animation: fadein 0.5s ease-in;
+  -webkit-animation: fadein 0.5s ease-in;
+  -moz-animation: fadein 0.5s ease-in;
+  -o-animation: fadein 0.5s ease-in;
+  -ms-animation: fadein 0.5s ease-in;
+}
+
+/* Flexbox */
+
+.flexbox {
+  display: flex;
+  align-items: center;
+}
+
+.flex30 {
+  flex: 0.3;
+}
+
+.flex50 {
+  flex: 0.5;
+}
+
+.flex70 {
+  flex: 0.7;
+}
+
+.flex100 {
+  flex: 1;
+}
+
+/* Main page styling */
+
+.title {
+  text-align: center;
+  font-size: 2.4em;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 800;
+  margin-bottom: 1.5em;
+  color: var(--accent-color);
+  text-shadow:
+    0px 1px 1.4px hsl(var(--shadow-color) / 0.19),
+    0px 12.8px 17.3px hsl(var(--shadow-color) / 0.32),
+    0.1px 30.6px 41.3px hsl(var(--shadow-color) / 0.46),
+    0.3px 70px 94.5px hsl(var(--shadow-color) / 0.6);
+}
+
+.card {
+  border-radius: 10px;
+  background-color: #F8F8F8;
+  padding: 20px;
+  margin-bottom: 1.5em;
+  box-shadow:
+    0px 1px 1.4px hsl(var(--shadow-color) / 0.19),
+    0px 12.8px 17.3px -0.3px hsl(var(--shadow-color) / 0.32),
+    0.1px 30.6px 41.3px -0.7px hsl(var(--shadow-color) / 0.46),
+    0.3px 70px 94.5px -1px hsl(var(--shadow-color) / 0.6);
+}
+
+.card .field {
+  margin-bottom: 20px;
+  overflow-wrap: anywhere;
+}
+
+.card .field .cardtitle {
+  font-weight: 700;
+  font-size: 1.2em;
+}
+
+.card .field.nobottommargin {
+  margin-bottom: 0px;
+}
+
+.card .field label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.card .field input:focus-visible {
+  outline: var(--accent-color) auto 1px;
+}
+
+.card .field .icon {
+  height: 15px;
+}
+
+.card input {
+  height: 40px;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 1em;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.card .field input {
+  padding: 2px 8px;
+  box-sizing: border-box;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing: border-box;
+  border: 1px solid var(--background-color);
+}
+
+.card .field .value {
+  color: black;
+}
+
+.card .submitbutton {
+  margin-top: 50px;
+}
+
+.card .submitbutton input {
+  background-color: var(--accent-color);
+  border: none;
+  color: white;
+  cursor: pointer;
+  border: 2px solid var(--accent-color);
+  transition: all .2s ease-in;
+  -webkit-transition: all .2s ease-in;
+}
+
+.card .submitbutton input:hover {
+  background:white;
+  color: var(--accent-color);
+}
+
+/* Payment Input */
+
+.paymenticons button {
+  height: 40px;
+  width: 40px;
+  margin-right: 5px;
+  text-align: center;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid var(--background-color);
+  border-radius: 5px;
+  transition: all .1s ease-in;
+  -webkit-transition: all .1s ease-in;
+}
+
+.paymenticons button.selected {
+  border-color: var(--accent-color);
+}
+
+.paymenticons button:hover {
+  border-color: var(--accent-color);
+}
+
+.paymenticons svg {
+  height: 25px;
+  width: 25px;
+  display: block;
+}
+
+.paymentinput {
+  font-size: 0.8em;
+}
+
+.subcaption {
+  position: absolute;
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+
+.sendingamount svg {
+  height: 25px;
+  width: 25px;
+  margin-right: 5px;
+}
+
+/* Code Snippet */ 
+
+code {
+  font-family: Consolas, "courier new";
+  color: crimson;
+  background-color: #f1f1f1;
+  padding: 2px;
+}
